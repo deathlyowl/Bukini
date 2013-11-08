@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA55D4D8182D963E00808519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D7182D963E00808519 /* Foundation.framework */; };
+		FA55D4DA182D963E00808519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D9182D963E00808519 /* CoreGraphics.framework */; };
+		FA55D4DC182D963E00808519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4DB182D963E00808519 /* UIKit.framework */; };
+		FA55D4E2182D963E00808519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA55D4E0182D963E00808519 /* InfoPlist.strings */; };
+		FA55D4E4182D963E00808519 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D4E3182D963E00808519 /* main.m */; };
+		FA55D4E8182D963E00808519 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D4E7182D963E00808519 /* AppDelegate.m */; };
+		FA55D4EB182D963E00808519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA55D4E9182D963E00808519 /* Main.storyboard */; };
+		FA55D4EE182D963E00808519 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D4ED182D963E00808519 /* FirstViewController.m */; };
+		FA55D4F1182D963E00808519 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D4F0182D963E00808519 /* SecondViewController.m */; };
+		FA55D4F3182D963E00808519 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA55D4F2182D963E00808519 /* Images.xcassets */; };
+		FA55D4FA182D963E00808519 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4F9182D963E00808519 /* XCTest.framework */; };
+		FA55D4FB182D963E00808519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D7182D963E00808519 /* Foundation.framework */; };
+		FA55D4FC182D963E00808519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4DB182D963E00808519 /* UIKit.framework */; };
+		FA55D504182D963E00808519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA55D502182D963E00808519 /* InfoPlist.strings */; };
+		FA55D506182D963E00808519 /* ExlibrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D505182D963E00808519 /* ExlibrisTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA55D4FD182D963E00808519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA55D4CC182D963E00808519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA55D4D3182D963E00808519;
+			remoteInfo = Exlibris;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA55D4D4182D963E00808519 /* Exlibris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exlibris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA55D4D7182D963E00808519 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA55D4D9182D963E00808519 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA55D4DB182D963E00808519 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA55D4DF182D963E00808519 /* Exlibris-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Exlibris-Info.plist"; sourceTree = "<group>"; };
+		FA55D4E1182D963E00808519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA55D4E3182D963E00808519 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA55D4E5182D963E00808519 /* Exlibris-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Exlibris-Prefix.pch"; sourceTree = "<group>"; };
+		FA55D4E6182D963E00808519 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FA55D4E7182D963E00808519 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA55D4EA182D963E00808519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA55D4EC182D963E00808519 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		FA55D4ED182D963E00808519 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		FA55D4EF182D963E00808519 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		FA55D4F0182D963E00808519 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FA55D4F2182D963E00808519 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FA55D4F8182D963E00808519 /* ExlibrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExlibrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA55D4F9182D963E00808519 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FA55D501182D963E00808519 /* ExlibrisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExlibrisTests-Info.plist"; sourceTree = "<group>"; };
+		FA55D503182D963E00808519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA55D505182D963E00808519 /* ExlibrisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExlibrisTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA55D4D1182D963E00808519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA55D4DA182D963E00808519 /* CoreGraphics.framework in Frameworks */,
+				FA55D4DC182D963E00808519 /* UIKit.framework in Frameworks */,
+				FA55D4D8182D963E00808519 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA55D4F5182D963E00808519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA55D4FA182D963E00808519 /* XCTest.framework in Frameworks */,
+				FA55D4FC182D963E00808519 /* UIKit.framework in Frameworks */,
+				FA55D4FB182D963E00808519 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA55D4CB182D963E00808519 = {
+			isa = PBXGroup;
+			children = (
+				FA55D4DD182D963E00808519 /* Exlibris */,
+				FA55D4FF182D963E00808519 /* ExlibrisTests */,
+				FA55D4D6182D963E00808519 /* Frameworks */,
+				FA55D4D5182D963E00808519 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA55D4D5182D963E00808519 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA55D4D4182D963E00808519 /* Exlibris.app */,
+				FA55D4F8182D963E00808519 /* ExlibrisTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA55D4D6182D963E00808519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA55D4D7182D963E00808519 /* Foundation.framework */,
+				FA55D4D9182D963E00808519 /* CoreGraphics.framework */,
+				FA55D4DB182D963E00808519 /* UIKit.framework */,
+				FA55D4F9182D963E00808519 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA55D4DD182D963E00808519 /* Exlibris */ = {
+			isa = PBXGroup;
+			children = (
+				FA55D4E6182D963E00808519 /* AppDelegate.h */,
+				FA55D4E7182D963E00808519 /* AppDelegate.m */,
+				FA55D4E9182D963E00808519 /* Main.storyboard */,
+				FA55D4EC182D963E00808519 /* FirstViewController.h */,
+				FA55D4ED182D963E00808519 /* FirstViewController.m */,
+				FA55D4EF182D963E00808519 /* SecondViewController.h */,
+				FA55D4F0182D963E00808519 /* SecondViewController.m */,
+				FA55D4F2182D963E00808519 /* Images.xcassets */,
+				FA55D4DE182D963E00808519 /* Supporting Files */,
+			);
+			path = Exlibris;
+			sourceTree = "<group>";
+		};
+		FA55D4DE182D963E00808519 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA55D4DF182D963E00808519 /* Exlibris-Info.plist */,
+				FA55D4E0182D963E00808519 /* InfoPlist.strings */,
+				FA55D4E3182D963E00808519 /* main.m */,
+				FA55D4E5182D963E00808519 /* Exlibris-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA55D4FF182D963E00808519 /* ExlibrisTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA55D505182D963E00808519 /* ExlibrisTests.m */,
+				FA55D500182D963E00808519 /* Supporting Files */,
+			);
+			path = ExlibrisTests;
+			sourceTree = "<group>";
+		};
+		FA55D500182D963E00808519 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA55D501182D963E00808519 /* ExlibrisTests-Info.plist */,
+				FA55D502182D963E00808519 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA55D4D3182D963E00808519 /* Exlibris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA55D509182D963E00808519 /* Build configuration list for PBXNativeTarget "Exlibris" */;
+			buildPhases = (
+				FA55D4D0182D963E00808519 /* Sources */,
+				FA55D4D1182D963E00808519 /* Frameworks */,
+				FA55D4D2182D963E00808519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Exlibris;
+			productName = Exlibris;
+			productReference = FA55D4D4182D963E00808519 /* Exlibris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA55D4F7182D963E00808519 /* ExlibrisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA55D50C182D963E00808519 /* Build configuration list for PBXNativeTarget "ExlibrisTests" */;
+			buildPhases = (
+				FA55D4F4182D963E00808519 /* Sources */,
+				FA55D4F5182D963E00808519 /* Frameworks */,
+				FA55D4F6182D963E00808519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA55D4FE182D963E00808519 /* PBXTargetDependency */,
+			);
+			name = ExlibrisTests;
+			productName = ExlibrisTests;
+			productReference = FA55D4F8182D963E00808519 /* ExlibrisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA55D4CC182D963E00808519 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Paweł Ksieniewicz";
+				TargetAttributes = {
+					FA55D4F7182D963E00808519 = {
+						TestTargetID = FA55D4D3182D963E00808519;
+					};
+				};
+			};
+			buildConfigurationList = FA55D4CF182D963E00808519 /* Build configuration list for PBXProject "Exlibris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA55D4CB182D963E00808519;
+			productRefGroup = FA55D4D5182D963E00808519 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA55D4D3182D963E00808519 /* Exlibris */,
+				FA55D4F7182D963E00808519 /* ExlibrisTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA55D4D2182D963E00808519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA55D4F3182D963E00808519 /* Images.xcassets in Resources */,
+				FA55D4E2182D963E00808519 /* InfoPlist.strings in Resources */,
+				FA55D4EB182D963E00808519 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA55D4F6182D963E00808519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA55D504182D963E00808519 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA55D4D0182D963E00808519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA55D4F1182D963E00808519 /* SecondViewController.m in Sources */,
+				FA55D4E8182D963E00808519 /* AppDelegate.m in Sources */,
+				FA55D4EE182D963E00808519 /* FirstViewController.m in Sources */,
+				FA55D4E4182D963E00808519 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA55D4F4182D963E00808519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA55D506182D963E00808519 /* ExlibrisTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA55D4FE182D963E00808519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA55D4D3182D963E00808519 /* Exlibris */;
+			targetProxy = FA55D4FD182D963E00808519 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA55D4E0182D963E00808519 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA55D4E1182D963E00808519 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA55D4E9182D963E00808519 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA55D4EA182D963E00808519 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA55D502182D963E00808519 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA55D503182D963E00808519 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA55D507182D963E00808519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FA55D508182D963E00808519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA55D50A182D963E00808519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
+				INFOPLIST_FILE = "Exlibris/Exlibris-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA55D50B182D963E00808519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
+				INFOPLIST_FILE = "Exlibris/Exlibris-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FA55D50D182D963E00808519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Exlibris.app/Exlibris";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ExlibrisTests/ExlibrisTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FA55D50E182D963E00808519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Exlibris.app/Exlibris";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
+				INFOPLIST_FILE = "ExlibrisTests/ExlibrisTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA55D4CF182D963E00808519 /* Build configuration list for PBXProject "Exlibris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA55D507182D963E00808519 /* Debug */,
+				FA55D508182D963E00808519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA55D509182D963E00808519 /* Build configuration list for PBXNativeTarget "Exlibris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA55D50A182D963E00808519 /* Debug */,
+				FA55D50B182D963E00808519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA55D50C182D963E00808519 /* Build configuration list for PBXNativeTarget "ExlibrisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA55D50D182D963E00808519 /* Debug */,
+				FA55D50E182D963E00808519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA55D4CC182D963E00808519 /* Project object */;
+}
