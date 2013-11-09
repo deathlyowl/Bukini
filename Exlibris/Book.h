@@ -15,6 +15,7 @@
 @property(nonatomic, retain) NSString *title;
 @property(nonatomic, retain) NSString *author;
 @property(nonatomic, retain) NSString *publisher;
+@property(nonatomic) BOOL isReaded;
 
 + (NSMutableArray *) all;
 + (void)saveQuiet:(BOOL) isQuiet;

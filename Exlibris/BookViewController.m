@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad
 {
+    [_isReadedSwitch setOn:NO];
+    
     showScanner = YES;
     [super viewDidLoad];
     
@@ -45,6 +47,7 @@
 }
 
 - (void) loadBook{
+    [_isReadedSwitch setOn:book.isReaded];
     [_authorField setText:book.author];
     [_titleField setText:book.title];
     [_publisherField setText:book.publisher];
@@ -62,7 +65,6 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
     
     if (showScanner)
     {
@@ -101,6 +103,7 @@
             book.author = _authorField.text;
             book.title = _titleField.text;
             book.publisher = _publisherField.text;
+            book.isReaded = _isReadedSwitch.on;
             
             [Book addBook:book];
         }
@@ -113,6 +116,7 @@
             newBook.author = _authorField.text;
             newBook.title = _titleField.text;
             newBook.publisher = _publisherField.text;
+            newBook.isReaded = _isReadedSwitch.on;
             
             [Book saveBook:newBook
                   overBook:book];

@@ -16,7 +16,7 @@ static NSData *importBuffer;
 
 @implementation Book
 
-@synthesize title, author, publisher;
+@synthesize title, author, publisher, isReaded;
 
 + (NSMutableArray *)all
 {
@@ -91,8 +91,12 @@ static NSData *importBuffer;
     NSUInteger index = [self.all indexOfObject:oldBook];
     
     if (index == NSNotFound) [self addBook:newBook];
-    else [self.all replaceObjectAtIndex:index withObject:newBook];
-    [self saveQuiet:NO];
+    else
+    {
+        [self.all replaceObjectAtIndex:index withObject:newBook];
+        [self sort];
+        [self saveQuiet:NO];
+    }
 }
 
 + (void)saveQuiet:(BOOL) isQuiet
@@ -106,6 +110,7 @@ static NSData *importBuffer;
 #pragma mark - Serialization
 - (void) encodeWithCoder:(NSCoder *)coder
 {
+    [coder encodeBool:isReaded forKey:@"isReaded"];
     [coder encodeObject:title forKey:@"title"];
     [coder encodeObject:author forKey:@"author"];
     [coder encodeObject:publisher forKey:@"publisher"];
@@ -113,6 +118,7 @@ static NSData *importBuffer;
 
 - (id)initWithCoder:(NSCoder *)coder
 {
+    isReaded = [coder decodeBoolForKey:@"isReaded"];
     title = [coder decodeObjectForKey:@"title"];
     author = [coder decodeObjectForKey:@"author"];
     publisher = [coder decodeObjectForKey:@"publisher"];
@@ -135,6 +141,7 @@ static NSData *importBuffer;
 
 + (void) filterWithString:(NSString *)string
 {
+    NSLog(@"Filter");
     filteredAll = [NSMutableArray arrayWithArray:self.all];
     if (string) [filteredAll filterUsingPredicate:[NSPredicate predicateWithFormat:
                                                    @"title contains[c] %@ || author contains[c] %@ || publisher contains[c] %@", string, string, string]];
@@ -177,13 +184,22 @@ static NSData *importBuffer;
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    Book *book = [Book bookForIndexPath:indexPath];
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
                                                             forIndexPath:indexPath];
-    Book *book = [Book bookForIndexPath:indexPath];
     [cell.textLabel setText:book.title];
     [cell.detailTextLabel setText:book.author];
     [cell.imageView setImage:[UIImage imageNamed:book.publisher]];
     
+    UIView *accessoryView = UIView.new;
+    [accessoryView setFrame:CGRectMake(0, 0, 10, 10)];
+    accessoryView.layer.cornerRadius = 5;
+    [accessoryView setBackgroundColor:book.isReaded ? UIColor.clearColor : tableView.tintColor];
+    
+    cell.accessoryView = accessoryView;
+    
+ 
     if (!cell.imageView.image) [cell.imageView setImage:[UIImage imageNamed:@"empty"]];
     
     return cell;

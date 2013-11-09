@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *authorField;
 @property (strong, nonatomic) IBOutlet UITextField *titleField;
 @property (strong, nonatomic) IBOutlet UITextField *publisherField;
+@property (strong, nonatomic) IBOutlet UISwitch *isReadedSwitch;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
