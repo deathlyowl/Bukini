@@ -126,12 +126,55 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="a1r-Z9-9to" kind="relationship" relationship="rootViewController" id="8i6-AF-HJQ"/>
+                        <segue destination="YGd-Mb-ANB" kind="relationship" relationship="rootViewController" id="rDO-3m-Wi8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NF0-bw-EA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672" y="1637"/>
+        </scene>
+        <!--Synchronize View Controller - Synchronizacja-->
+        <scene sceneID="7vV-qv-TFU">
+            <objects>
+                <tableViewController id="YGd-Mb-ANB" customClass="SynchronizeViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="cPb-Fi-Stc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Udostępnij archiwum" id="agO-dI-Sf6">
+                                <string key="footerTitle">Udostępnianie archiwum, najzwyczajniej w świecie, powoduje tylko powielenie bazy aplikacji. Nie daje to możliwości synchronizacji księgozbioru z innymi użytkownikami. To najlepsza opcja, jeśli zależy Ci po prostu na kopii zapasowej bazy.</string>
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="FT4-zg-Z3L" style="IBUITableViewCellStyleDefault" id="FaY-Ib-RCx">
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FaY-Ib-RCx" id="2QM-NM-z1S">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Wyślij mailem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FT4-zg-Z3L">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="YGd-Mb-ANB" id="8L1-tk-eEP"/>
+                            <outlet property="delegate" destination="YGd-Mb-ANB" id="0FD-hi-HYh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Synchronizacja" id="XPf-Do-Xm0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odD-gZ-LVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="1637"/>
         </scene>
         <!--View Controller - Dłużnicy-->
         <scene sceneID="1Ns-gW-q0E">
@@ -169,7 +212,7 @@
         <scene sceneID="v9F-IU-xbh">
             <objects>
                 <navigationController definesPresentationContext="YES" id="fUV-cb-cne" customClass="DebtorViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dłużnicy" image="user" id="t7d-BE-P4L"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Dłużnicy" image="user" id="t7d-BE-P4L"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ew9-Bx-XJg">
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -313,38 +356,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwJ-Hj-HbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1664" y="180"/>
-        </scene>
-        <!--View Controller - Synchronizacja-->
-        <scene sceneID="Kc6-Ug-oMz">
-            <objects>
-                <viewController id="a1r-Z9-9to" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Uil-zg-n8b"/>
-                        <viewControllerLayoutGuide type="bottom" id="hvp-nI-lt9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ns4-wG-Le9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Już wkrótce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQh-oG-wxW">
-                                <rect key="frame" x="127" y="276" width="68" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="UQh-oG-wxW" secondAttribute="centerY" constant="0.5" id="dqV-kt-h3y"/>
-                            <constraint firstAttribute="centerX" secondItem="UQh-oG-wxW" secondAttribute="centerX" constant="-0.5" id="eDx-pc-N6H"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Synchronizacja" id="UJt-pI-7o8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4bA-Eg-5MG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1216" y="1637"/>
         </scene>
     </scenes>
     <resources>

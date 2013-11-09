@@ -16,6 +16,15 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation
+{
+    [Book importArchive:[NSData dataWithContentsOfURL:url]];
+    return YES;
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

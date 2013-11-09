@@ -11,6 +11,8 @@
 static NSArray *sectionsArray, *initialsArray;
 static NSString *filterString;
 static NSMutableArray *filteredAll;
+static NSMutableArray *allBooks;
+static NSData *importBuffer;
 
 @implementation Book
 
@@ -19,13 +21,44 @@ static NSMutableArray *filteredAll;
 + (NSMutableArray *)all
 {
     static dispatch_once_t once;
-    static NSMutableArray *allBooks;
     dispatch_once(&once, ^
     {
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:self.class.description];
         allBooks = data ? [NSKeyedUnarchiver unarchiveObjectWithData:data] : NSMutableArray.new;
     });
     return allBooks;
+}
+
++ (void) importArchive:(NSData *)archive{
+    importBuffer = archive;
+    UIAlertView *missingAlert = [[UIAlertView alloc] initWithTitle:@"Nowe archiwum"
+                                              message:@"Wygląda na to, że chcesz skorzystać z pliku archiwum."
+                                             delegate:self
+                                    cancelButtonTitle:@"Nie rób nic"
+                                    otherButtonTitles:@"Zastąp bazę nową", @"Połącz bazy", nil];
+    
+    [missingAlert show];
+}
+
++ (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // 0 - nie rób nic
+    // 1 — zastąp
+    // 2 — połącz
+    
+    switch (buttonIndex) {
+        case 0: return;
+        case 1:
+            allBooks = importBuffer ? [NSKeyedUnarchiver unarchiveObjectWithData:importBuffer] : allBooks;
+            break;
+        case 2:
+            if (importBuffer) {
+                NSMutableArray *newBooks = [NSKeyedUnarchiver unarchiveObjectWithData:importBuffer];
+                [allBooks addObjectsFromArray:newBooks];
+            }
+    }
+    [self sort];
+    [self saveQuiet:NO];
 }
 
 + (Book *)bookWithVolumeInfoDictionary:(NSDictionary *)volumeInfo{

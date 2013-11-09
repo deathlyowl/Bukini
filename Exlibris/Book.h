@@ -31,4 +31,6 @@
 
 + (Book *) bookWithVolumeInfoDictionary:(NSDictionary *)volumeInfo;
 
++ (void) importArchive:(NSData *)archive;
+
 @end

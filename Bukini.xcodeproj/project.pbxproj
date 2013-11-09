@@ -19,6 +19,7 @@
 		FA1F332F182EA06200F67285 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F332E182EA06200F67285 /* CoreVideo.framework */; };
 		FA1F3331182EA06B00F67285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F3330182EA06B00F67285 /* QuartzCore.framework */; };
 		FA1F3333182EA07800F67285 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F3332182EA07800F67285 /* libiconv.dylib */; };
+		FA1F3336182EC23900F67285 /* SynchronizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F3335182EC23900F67285 /* SynchronizeViewController.m */; };
 		FA422821182E299200EB74A1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA422820182E299200EB74A1 /* BookViewController.m */; };
 		FA55D4D8182D963E00808519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D7182D963E00808519 /* Foundation.framework */; };
 		FA55D4DA182D963E00808519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D9182D963E00808519 /* CoreGraphics.framework */; };
@@ -81,6 +82,8 @@
 		FA1F332E182EA06200F67285 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		FA1F3330182EA06B00F67285 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FA1F3332182EA07800F67285 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		FA1F3334182EC23900F67285 /* SynchronizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizeViewController.h; sourceTree = "<group>"; };
+		FA1F3335182EC23900F67285 /* SynchronizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizeViewController.m; sourceTree = "<group>"; };
 		FA42281F182E299200EB74A1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		FA422820182E299200EB74A1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		FA55D4D4182D963E00808519 /* Exlibris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exlibris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +259,8 @@
 				FA55D510182D9A3A00808519 /* BooksViewController.m */,
 				FA42281F182E299200EB74A1 /* BookViewController.h */,
 				FA422820182E299200EB74A1 /* BookViewController.m */,
+				FA1F3334182EC23900F67285 /* SynchronizeViewController.h */,
+				FA1F3335182EC23900F67285 /* SynchronizeViewController.m */,
 				FA55D517182DA0CF00808519 /* Book.h */,
 				FA55D518182DA0CF00808519 /* Book.m */,
 				FA1F3300182E733B00F67285 /* Navcons */,
@@ -324,6 +329,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Paweł Ksieniewicz";
 				TargetAttributes = {
+					FA55D4D3182D963E00808519 = {
+						DevelopmentTeam = 377SA7CLTK;
+					};
 					FA55D4F7182D963E00808519 = {
 						TestTargetID = FA55D4D3182D963E00808519;
 					};
@@ -380,6 +388,7 @@
 				FA422821182E299200EB74A1 /* BookViewController.m in Sources */,
 				FA55D511182D9A3A00808519 /* BooksViewController.m in Sources */,
 				FA55D4E8182D963E00808519 /* AppDelegate.m in Sources */,
+				FA1F3336182EC23900F67285 /* SynchronizeViewController.m in Sources */,
 				FA1F3306182E737000F67285 /* SyncViewController.m in Sources */,
 				FA55D514182D9B0400808519 /* BooksNavigationViewController.m in Sources */,
 				FA55D519182DA0CF00808519 /* Book.m in Sources */,
@@ -502,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
 				INFOPLIST_FILE = "Exlibris/Exlibris-Info.plist";
@@ -519,6 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
 				INFOPLIST_FILE = "Exlibris/Exlibris-Info.plist";
