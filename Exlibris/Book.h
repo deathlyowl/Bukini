@@ -10,8 +10,7 @@
 
 #define BOOKS_UPDATED @"Books updated"
 
-
-@interface Book : NSObject <NSCoding, UITableViewDataSource>
+@interface Book : NSObject <NSCoding, UITableViewDataSource, UISearchBarDelegate>
 
 @property(nonatomic, retain) NSString *title;
 @property(nonatomic, retain) NSString *author;

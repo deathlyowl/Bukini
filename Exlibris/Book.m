@@ -10,6 +10,8 @@
 
 static NSArray *sectionsArray;
 static NSArray *initialsArray;
+static NSMutableArray *filteredAll;
+static NSString *filterString;
 
 @implementation Book
 
@@ -24,24 +26,38 @@ static NSArray *initialsArray;
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:self.class.description];
         if (data)   allBooks = [NSKeyedUnarchiver unarchiveObjectWithData:data];
         else        allBooks = NSMutableArray.new;
+        NSLog(@"%i books", allBooks.count);
     });
+    
     return allBooks;
 }
 
-+ (void) generateSections{
-    NSLog(@"Gensec");
++ (void) filterWithString:(NSString *)string{
+    filteredAll = [NSMutableArray arrayWithArray:self.all];
+    
+    if (string) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:
+                                  @"title contains[c] %@ || author contains[c] %@ || publisher contains[c] %@", string, string, string];
+        
+        [filteredAll filterUsingPredicate:predicate];
+    }
+    
+    NSLog(@"%i filtered", filteredAll.count);
+}
+
++ (void) generateSections
+{
     NSMutableSet *initialsSet = NSMutableSet.new;
-    for (Book *book in self.all) [initialsSet addObject:[book.title substringToIndex:1]];
+    for (Book *book in filteredAll) [initialsSet addObject:[[book.title substringToIndex:1] uppercaseString]];
     initialsArray = [[initialsSet allObjects]
                      sortedArrayUsingComparator:
-                     ^NSComparisonResult(NSString *a, NSString *b){return [a compare:b];}];
-    
+                     ^NSComparisonResult(NSString *a, NSString *b){return [a localizedCompare:b];}];
     
     NSMutableArray *mutableSectionsArray = NSMutableArray.new;
     
     for (NSString *initial in initialsArray)
     {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title beginswith %@", initial];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title beginswith[c] %@", initial];
         NSArray *filtered = [Book.all filteredArrayUsingPredicate:predicate];
         [mutableSectionsArray addObject:filtered];
     }
@@ -49,8 +65,19 @@ static NSArray *initialsArray;
     sectionsArray = (NSArray *) mutableSectionsArray;
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    filterString = searchText.length ? searchText : nil;
+    
+    [Book sort];
+    
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:BOOKS_UPDATED object:nil];
+}
+
 + (void) sort{
-    [self.all sortUsingComparator:^NSComparisonResult(Book *a, Book *b){return [a.title compare:b.title];}];
+    [self filterWithString:filterString];
+    
+    [filteredAll sortUsingComparator:^NSComparisonResult(Book *a, Book *b){return [a.title compare:b.title];}];
     [self generateSections];
 }
 
