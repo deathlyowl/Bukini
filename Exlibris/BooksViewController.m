@@ -10,20 +10,7 @@
 #import "Book.h"
 #import "BookViewController.h"
 
-@interface BooksViewController ()
-
-@end
-
 @implementation BooksViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -74,7 +61,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"edit"
-                              sender:Book.all[indexPath.row]];
+                              sender:[Book bookForIndexPath:indexPath]];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

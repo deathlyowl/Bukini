@@ -23,7 +23,6 @@
 		FA55D506182D963E00808519 /* ExlibrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D505182D963E00808519 /* ExlibrisTests.m */; };
 		FA55D511182D9A3A00808519 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D510182D9A3A00808519 /* BooksViewController.m */; };
 		FA55D514182D9B0400808519 /* BooksNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D513182D9B0400808519 /* BooksNavigationViewController.m */; };
-		FA55D516182DA06B00808519 /* books.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA55D515182DA06B00808519 /* books.plist */; };
 		FA55D519182DA0CF00808519 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D518182DA0CF00808519 /* Book.m */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		FA55D510182D9A3A00808519 /* BooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksViewController.m; sourceTree = "<group>"; };
 		FA55D512182D9B0400808519 /* BooksNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksNavigationViewController.h; sourceTree = "<group>"; };
 		FA55D513182D9B0400808519 /* BooksNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksNavigationViewController.m; sourceTree = "<group>"; };
-		FA55D515182DA06B00808519 /* books.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = books.plist; sourceTree = "<group>"; };
 		FA55D517182DA0CF00808519 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		FA55D518182DA0CF00808519 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +121,6 @@
 		FA55D4DD182D963E00808519 /* Exlibris */ = {
 			isa = PBXGroup;
 			children = (
-				FA55D515182DA06B00808519 /* books.plist */,
 				FA55D4E6182D963E00808519 /* AppDelegate.h */,
 				FA55D4E7182D963E00808519 /* AppDelegate.m */,
 				FA55D50F182D9A3A00808519 /* BooksViewController.h */,
@@ -249,7 +246,6 @@
 				FA55D4F3182D963E00808519 /* Images.xcassets in Resources */,
 				FA55D4E2182D963E00808519 /* InfoPlist.strings in Resources */,
 				FA55D4EB182D963E00808519 /* Main.storyboard in Resources */,
-				FA55D516182DA06B00808519 /* books.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

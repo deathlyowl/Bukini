@@ -10,6 +10,7 @@
 
 #define BOOKS_UPDATED @"Books updated"
 
+
 @interface Book : NSObject <NSCoding, UITableViewDataSource>
 
 @property(nonatomic, retain) NSString *title;
@@ -26,5 +27,7 @@
 
 + (void) saveBook:(Book *) newBook
          overBook:(Book *) oldBook;
+
++ (Book *) bookForIndexPath:(NSIndexPath *)indexPath;
 
 @end

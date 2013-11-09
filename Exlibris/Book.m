@@ -8,34 +8,50 @@
 
 #import "Book.h"
 
+static NSArray *sectionsArray;
+static NSArray *initialsArray;
+
 @implementation Book
 
 @synthesize title, author, publisher;
 
-+ (NSMutableArray *)all{
++ (NSMutableArray *)all
+{
     static dispatch_once_t once;
     static NSMutableArray *allBooks;
-    dispatch_once(&once, ^{
-        allBooks = [[NSMutableArray alloc] init];
+    dispatch_once(&once, ^
+    {
         NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:self.class.description];
-        if (data)
-        {
-            // Loading from file
-            allBooks = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-
-            NSLog(@"[Book]\tThey're %i books in my memories!", allBooks.count);
-        }
-        else
-        {
-            allBooks = NSMutableArray.new;
-            NSLog(@"[Book]\tLoading default DB");
-        }
+        if (data)   allBooks = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        else        allBooks = NSMutableArray.new;
     });
     return allBooks;
 }
 
++ (void) generateSections{
+    NSLog(@"Gensec");
+    NSMutableSet *initialsSet = NSMutableSet.new;
+    for (Book *book in self.all) [initialsSet addObject:[book.title substringToIndex:1]];
+    initialsArray = [[initialsSet allObjects]
+                     sortedArrayUsingComparator:
+                     ^NSComparisonResult(NSString *a, NSString *b){return [a compare:b];}];
+    
+    
+    NSMutableArray *mutableSectionsArray = NSMutableArray.new;
+    
+    for (NSString *initial in initialsArray)
+    {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title beginswith %@", initial];
+        NSArray *filtered = [Book.all filteredArrayUsingPredicate:predicate];
+        [mutableSectionsArray addObject:filtered];
+    }
+    
+    sectionsArray = (NSArray *) mutableSectionsArray;
+}
+
 + (void) sort{
-    [self.all sortUsingComparator:^ NSComparisonResult(Book *a, Book *b){return [a.title compare:b.title];}];
+    [self.all sortUsingComparator:^NSComparisonResult(Book *a, Book *b){return [a.title compare:b.title];}];
+    [self generateSections];
 }
 
 + (void)addBook:(Book *)book{
@@ -46,11 +62,9 @@
 }
 
 + (void)removeBook:(Book *)book{
-    NSLog(@"Before: %i", self.all.count);
     NSLog(@"[Book]\tRemoving book: %@", book);
     [self.all removeObject:book];
     [self saveQuiet:YES];
-    NSLog(@"After: %i", self.all.count);
 }
 
 + (void)saveBook:(Book *)newBook
@@ -98,16 +112,17 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return initialsArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return Book.all.count;
+    return [sectionsArray[section] count];
 }
 
-
++ (Book *)bookForIndexPath:(NSIndexPath *)indexPath{
+    return sectionsArray[indexPath.section][indexPath.row];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -116,7 +131,7 @@
     
     // Configure the cell...
     
-    Book *book = Book.all[indexPath.row];
+    Book *book = [Book bookForIndexPath:indexPath];
     [cell.textLabel setText:book.title];
     [cell.detailTextLabel setText:book.author];
     [cell.imageView setImage:[UIImage imageNamed:book.publisher]];
@@ -125,21 +140,20 @@
     
     return cell;
 }
-/*
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return @"abcd";
+    return initialsArray[section];
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return[NSArray arrayWithObjects:@"a", @"e", @"i", @"m", @"p", nil];
+    return initialsArray;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
 sectionForSectionIndexTitle:(NSString *)title
                atIndex:(NSInteger)index
 {
-    return 0;
+    return index;
 }
-*/
 
 @end
