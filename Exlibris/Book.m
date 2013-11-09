@@ -88,7 +88,7 @@ static NSData *importBuffer;
 + (void)saveBook:(Book *)newBook
         overBook:(Book *)oldBook
 {
-    int index = [self.all indexOfObject:oldBook];
+    NSUInteger index = [self.all indexOfObject:oldBook];
     
     if (index == NSNotFound) [self addBook:newBook];
     else [self.all replaceObjectAtIndex:index withObject:newBook];
@@ -170,7 +170,8 @@ static NSData *importBuffer;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [sectionsArray[section] count];
+    NSArray *currentSection = sectionsArray[section];
+    return currentSection.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
