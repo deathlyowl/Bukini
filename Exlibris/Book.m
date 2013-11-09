@@ -64,6 +64,7 @@ static NSArray *initialsArray;
 + (void)removeBook:(Book *)book{
     NSLog(@"[Book]\tRemoving book: %@", book);
     [self.all removeObject:book];
+    [self sort];
     [self saveQuiet:YES];
 }
 
@@ -154,6 +155,33 @@ sectionForSectionIndexTitle:(NSString *)title
                atIndex:(NSInteger)index
 {
     return index;
+}
+
+
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        BOOL lastRow = [tableView numberOfRowsInSection:indexPath.section] == 1;
+        
+        [Book removeBook:[Book bookForIndexPath:indexPath]];
+        // Delete the row from the data source
+        //
+        
+        if (lastRow)    [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
+        else            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
 }
 
 @end
