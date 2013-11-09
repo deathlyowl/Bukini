@@ -238,43 +238,11 @@
             </objects>
             <point key="canvasLocation" x="1216" y="1637"/>
         </scene>
-        <!--View Controller - Dłużnicy-->
-        <scene sceneID="1Ns-gW-q0E">
-            <objects>
-                <viewController id="lJ4-no-RSR" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hRC-c1-ZF3"/>
-                        <viewControllerLayoutGuide type="bottom" id="5rL-UB-zQx"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ves-5q-got">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Już wkrótce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz3-3I-f0Z">
-                                <rect key="frame" x="126" y="276" width="68" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="tz3-3I-f0Z" secondAttribute="centerY" constant="0.5" id="akR-X6-Bpr"/>
-                            <constraint firstAttribute="centerX" secondItem="tz3-3I-f0Z" secondAttribute="centerX" id="pmi-9d-ZGw"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Dłużnicy" id="JQF-rr-T0C"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9kY-Qv-h52" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1216" y="916"/>
-        </scene>
         <!--Debtor View Controller - Dłużnicy-->
         <scene sceneID="v9F-IU-xbh">
             <objects>
                 <navigationController definesPresentationContext="YES" id="fUV-cb-cne" customClass="DebtorViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Dłużnicy" image="user" id="t7d-BE-P4L"/>
+                    <tabBarItem key="tabBarItem" title="Dłużnicy" image="user" id="t7d-BE-P4L"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ew9-Bx-XJg">
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -282,12 +250,54 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="lJ4-no-RSR" kind="relationship" relationship="rootViewController" id="N12-eS-liG"/>
+                        <segue destination="ojR-Uc-Mez" kind="relationship" relationship="rootViewController" id="CxA-EA-sQL"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BD7-ep-Kzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="676" y="916"/>
+        </scene>
+        <!--Deptors View Controller - Dłużnicy-->
+        <scene sceneID="1Bx-Cb-ZMr">
+            <objects>
+                <tableViewController id="ojR-Uc-Mez" customClass="DeptorsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="S0z-NQ-6lN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="J46-Pa-Rq7" imageView="BG2-29-zQU" style="IBUITableViewCellStyleDefault" id="RaS-Vx-xMY">
+                                <rect key="frame" x="0.0" y="86" width="320" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RaS-Vx-xMY" id="r7U-9c-UZf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J46-Pa-Rq7">
+                                            <rect key="frame" x="85" y="0.0" width="220" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="forrest" id="BG2-29-zQU">
+                                            <rect key="frame" x="15" y="5" width="55" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ojR-Uc-Mez" id="PxT-kG-kQi"/>
+                            <outlet property="delegate" destination="ojR-Uc-Mez" id="6ig-yf-X9d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dłużnicy" id="TB5-W2-2aT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRl-lA-kjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="916"/>
         </scene>
         <!--Book View Controller - Książka-->
         <scene sceneID="fml-dK-bBt">
@@ -451,6 +461,7 @@
         <image name="bookmarks" width="25" height="23"/>
         <image name="cloud" width="30" height="19"/>
         <image name="czarne" width="55" height="55"/>
+        <image name="forrest" width="55" height="55"/>
         <image name="user" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.988608717918396" green="0.37676775455474854" blue="0.40675529837608337" alpha="1" colorSpace="calibratedRGB"/>

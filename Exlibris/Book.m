@@ -141,7 +141,6 @@ static NSData *importBuffer;
 
 + (void) filterWithString:(NSString *)string
 {
-    NSLog(@"Filter");
     filteredAll = [NSMutableArray arrayWithArray:self.all];
     if (string) [filteredAll filterUsingPredicate:[NSPredicate predicateWithFormat:
                                                    @"title contains[c] %@ || author contains[c] %@ || publisher contains[c] %@", string, string, string]];

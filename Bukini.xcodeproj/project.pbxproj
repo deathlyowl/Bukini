@@ -37,6 +37,7 @@
 		FA55D511182D9A3A00808519 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D510182D9A3A00808519 /* BooksViewController.m */; };
 		FA55D514182D9B0400808519 /* BooksNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D513182D9B0400808519 /* BooksNavigationViewController.m */; };
 		FA55D519182DA0CF00808519 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D518182DA0CF00808519 /* Book.m */; };
+		FAD20D7C182EF4BB00335C0B /* DeptorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD20D7B182EF4BB00335C0B /* DeptorsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		FA55D513182D9B0400808519 /* BooksNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksNavigationViewController.m; sourceTree = "<group>"; };
 		FA55D517182DA0CF00808519 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		FA55D518182DA0CF00808519 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		FAD20D7A182EF4BB00335C0B /* DeptorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeptorsViewController.h; sourceTree = "<group>"; };
+		FAD20D7B182EF4BB00335C0B /* DeptorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeptorsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,8 @@
 				FA55D4E7182D963E00808519 /* AppDelegate.m */,
 				FA55D50F182D9A3A00808519 /* BooksViewController.h */,
 				FA55D510182D9A3A00808519 /* BooksViewController.m */,
+				FAD20D7A182EF4BB00335C0B /* DeptorsViewController.h */,
+				FAD20D7B182EF4BB00335C0B /* DeptorsViewController.m */,
 				FA42281F182E299200EB74A1 /* BookViewController.h */,
 				FA422820182E299200EB74A1 /* BookViewController.m */,
 				FA1F3334182EC23900F67285 /* SynchronizeViewController.h */,
@@ -397,6 +402,7 @@
 				FA55D511182D9A3A00808519 /* BooksViewController.m in Sources */,
 				FA55D4E8182D963E00808519 /* AppDelegate.m in Sources */,
 				FA1F3336182EC23900F67285 /* SynchronizeViewController.m in Sources */,
+				FAD20D7C182EF4BB00335C0B /* DeptorsViewController.m in Sources */,
 				FA1F3306182E737000F67285 /* SyncViewController.m in Sources */,
 				FA55D514182D9B0400808519 /* BooksNavigationViewController.m in Sources */,
 				FA55D519182DA0CF00808519 /* Book.m in Sources */,
