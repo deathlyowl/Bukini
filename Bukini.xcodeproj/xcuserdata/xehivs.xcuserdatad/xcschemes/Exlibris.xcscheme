@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA55D4D3182D963E00808519"
                BuildableName = "Exlibris.app"
-               BlueprintName = "Exlibris"
-               ReferencedContainer = "container:Exlibris.xcodeproj">
+               BlueprintName = "Bukini"
+               ReferencedContainer = "container:Bukini.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA55D4F7182D963E00808519"
                BuildableName = "ExlibrisTests.xctest"
-               BlueprintName = "ExlibrisTests"
-               ReferencedContainer = "container:Exlibris.xcodeproj">
+               BlueprintName = "BukiniTests"
+               ReferencedContainer = "container:Bukini.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA55D4D3182D963E00808519"
             BuildableName = "Exlibris.app"
-            BlueprintName = "Exlibris"
-            ReferencedContainer = "container:Exlibris.xcodeproj">
+            BlueprintName = "Bukini"
+            ReferencedContainer = "container:Bukini.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA55D4D3182D963E00808519"
             BuildableName = "Exlibris.app"
-            BlueprintName = "Exlibris"
-            ReferencedContainer = "container:Exlibris.xcodeproj">
+            BlueprintName = "Bukini"
+            ReferencedContainer = "container:Bukini.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA55D4D3182D963E00808519"
             BuildableName = "Exlibris.app"
-            BlueprintName = "Exlibris"
-            ReferencedContainer = "container:Exlibris.xcodeproj">
+            BlueprintName = "Bukini"
+            ReferencedContainer = "container:Bukini.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
