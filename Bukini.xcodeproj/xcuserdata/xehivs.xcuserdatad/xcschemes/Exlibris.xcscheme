@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA55D4D3182D963E00808519"
                BuildableName = "Exlibris.app"
-               BlueprintName = "Bukini"
+               BlueprintName = "Exlibris"
                ReferencedContainer = "container:Bukini.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA55D4F7182D963E00808519"
                BuildableName = "ExlibrisTests.xctest"
-               BlueprintName = "BukiniTests"
+               BlueprintName = "ExlibrisTests"
                ReferencedContainer = "container:Bukini.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA55D4D3182D963E00808519"
             BuildableName = "Exlibris.app"
-            BlueprintName = "Bukini"
+            BlueprintName = "Exlibris"
             ReferencedContainer = "container:Bukini.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA55D4D3182D963E00808519"
             BuildableName = "Exlibris.app"
-            BlueprintName = "Bukini"
+            BlueprintName = "Exlibris"
             ReferencedContainer = "container:Bukini.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA55D4D3182D963E00808519"
             BuildableName = "Exlibris.app"
-            BlueprintName = "Bukini"
+            BlueprintName = "Exlibris"
             ReferencedContainer = "container:Bukini.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
