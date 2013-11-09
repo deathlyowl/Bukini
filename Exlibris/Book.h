@@ -10,7 +10,7 @@
 
 #define BOOKS_UPDATED @"Books updated"
 
-@interface Book : NSObject <NSCoding>
+@interface Book : NSObject <NSCoding, UITableViewDataSource>
 
 @property(nonatomic, retain) NSString *title;
 @property(nonatomic, retain) NSString *author;
@@ -18,6 +18,8 @@
 
 + (NSMutableArray *) all;
 + (void)saveQuiet:(BOOL) isQuiet;
+
++ (void) sort;
 
 + (void) addBook:(Book *) book;
 + (void) removeBook:(Book *) book;

@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [Book sort];
     
     [[NSNotificationCenter defaultCenter] addObserver:self.tableView
                                              selector:@selector(reloadData)
@@ -47,34 +48,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return Book.all.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    Book *book = Book.all[indexPath.row];
-    [cell.textLabel setText:book.title];
-    [cell.detailTextLabel setText:book.author];
-    [cell.imageView setImage:[UIImage imageNamed:book.publisher]];
-    
-    return cell;
-}
 
 
 // Override to support conditional editing of the table view.
@@ -99,27 +72,15 @@
     }   
 }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"edit"
                               sender:Book.all[indexPath.row]];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow
+                                  animated:YES];
+}
 
 #pragma mark - Navigation
 
@@ -129,6 +90,10 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"edit"]) [segue.destinationViewController setBook:sender];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [_searchBar resignFirstResponder];
 }
 
 @end
