@@ -20,6 +20,8 @@
 		FA1F3331182EA06B00F67285 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F3330182EA06B00F67285 /* QuartzCore.framework */; };
 		FA1F3333182EA07800F67285 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F3332182EA07800F67285 /* libiconv.dylib */; };
 		FA1F3336182EC23900F67285 /* SynchronizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F3335182EC23900F67285 /* SynchronizeViewController.m */; };
+		FA1F333A182ED2B300F67285 /* DBChooser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F3339182ED2B300F67285 /* DBChooser.framework */; };
+		FA1F333C182ED32E00F67285 /* DBChooser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA1F333B182ED32E00F67285 /* DBChooser.bundle */; };
 		FA422821182E299200EB74A1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA422820182E299200EB74A1 /* BookViewController.m */; };
 		FA55D4D8182D963E00808519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D7182D963E00808519 /* Foundation.framework */; };
 		FA55D4DA182D963E00808519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D9182D963E00808519 /* CoreGraphics.framework */; };
@@ -84,6 +86,8 @@
 		FA1F3332182EA07800F67285 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		FA1F3334182EC23900F67285 /* SynchronizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizeViewController.h; sourceTree = "<group>"; };
 		FA1F3335182EC23900F67285 /* SynchronizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizeViewController.m; sourceTree = "<group>"; };
+		FA1F3339182ED2B300F67285 /* DBChooser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DBChooser.framework; sourceTree = "<group>"; };
+		FA1F333B182ED32E00F67285 /* DBChooser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DBChooser.bundle; path = ../DBChooser.bundle; sourceTree = "<group>"; };
 		FA42281F182E299200EB74A1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		FA422820182E299200EB74A1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		FA55D4D4182D963E00808519 /* Exlibris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exlibris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +125,7 @@
 				FA55D4DA182D963E00808519 /* CoreGraphics.framework in Frameworks */,
 				FA55D4DC182D963E00808519 /* UIKit.framework in Frameworks */,
 				FA1F3325182EA04200F67285 /* libzbar.a in Frameworks */,
+				FA1F333A182ED2B300F67285 /* DBChooser.framework in Frameworks */,
 				FA55D4D8182D963E00808519 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +241,7 @@
 		FA55D4D6182D963E00808519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA1F3339182ED2B300F67285 /* DBChooser.framework */,
 				FA1F3307182EA03400F67285 /* ZBar */,
 				FA1F3332182EA07800F67285 /* libiconv.dylib */,
 				FA1F3330182EA06B00F67285 /* QuartzCore.framework */,
@@ -274,6 +280,7 @@
 		FA55D4DE182D963E00808519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA1F333B182ED32E00F67285 /* DBChooser.bundle */,
 				FA55D4DF182D963E00808519 /* Exlibris-Info.plist */,
 				FA55D4E0182D963E00808519 /* InfoPlist.strings */,
 				FA55D4E3182D963E00808519 /* main.m */,
@@ -362,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA55D4F3182D963E00808519 /* Images.xcassets in Resources */,
+				FA1F333C182ED32E00F67285 /* DBChooser.bundle in Resources */,
 				FA1F3327182EA04200F67285 /* zbar-help.html in Resources */,
 				FA1F3329182EA04200F67285 /* zbar-samples.png in Resources */,
 				FA1F3328182EA04200F67285 /* zbar-helpicons.png in Resources */,
@@ -512,6 +520,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/xehivs/coding/bukini,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
 				INFOPLIST_FILE = "Exlibris/Exlibris-Info.plist";
@@ -530,6 +542,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/xehivs/coding/bukini,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
 				INFOPLIST_FILE = "Exlibris/Exlibris-Info.plist";

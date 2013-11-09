@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Book.h"
+#import <DBChooser/DBChooser.h>
 
 @implementation AppDelegate
 
@@ -22,6 +23,15 @@
  sourceApplication:(NSString *)sourceApplication
         annotation:(id)annotation
 {
+    NSLog(@"FIle");
+    if ([[DBChooser defaultChooser] handleOpenURL:url]) {
+        NSLog(@"DBC!");
+        // This was a Chooser response and handleOpenURL automatically ran the
+        // completion block
+        return YES;
+    }
+    
+    
     [Book importArchive:[NSData dataWithContentsOfURL:url]];
     return YES;
 }
