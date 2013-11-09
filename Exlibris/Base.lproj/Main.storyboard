@@ -17,6 +17,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="aDW-By-aVp" kind="relationship" relationship="viewControllers" id="6ad-iR-eGm"/>
+                        <segue destination="fUV-cb-cne" kind="relationship" relationship="viewControllers" id="ek2-ES-8zZ"/>
+                        <segue destination="Jdc-jR-tQh" kind="relationship" relationship="viewControllers" id="8fc-LL-k7I"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -40,9 +42,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttb-2Q-0bO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="600" y="180"/>
+            <point key="canvasLocation" x="676" y="180"/>
         </scene>
-        <!--Books View Controller - Biblioteka-->
+        <!--Books View Controller - Książki-->
         <scene sceneID="uOa-8Y-dG0">
             <objects>
                 <tableViewController id="n3A-MB-4He" customClass="BooksViewController" sceneMemberID="viewController">
@@ -95,7 +97,7 @@
                             <outlet property="delegate" destination="n3A-MB-4He" id="4xF-9t-RBX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Biblioteka" id="tZS-b9-7uy">
+                    <navigationItem key="navigationItem" title="Książki" id="tZS-b9-7uy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gwb-dd-xGh">
                             <connections>
                                 <segue destination="T0F-cw-e6j" kind="modal" id="caN-gF-ezP"/>
@@ -110,7 +112,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OG-Lp-HrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="wfd-EC-wwy" customClass="Book"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="180"/>
+            <point key="canvasLocation" x="1210" y="180"/>
+        </scene>
+        <!--Sync View Controller - Synchronizacja-->
+        <scene sceneID="m6Q-7X-g5s">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Jdc-jR-tQh" customClass="SyncViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Synchronizacja" image="cloud" id="eMw-vf-Nkm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8HS-sF-dc6">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.89641869070000002" green="0.32726332549999998" blue="0.42770886419999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="a1r-Z9-9to" kind="relationship" relationship="rootViewController" id="8i6-AF-HJQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NF0-bw-EA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="1637"/>
+        </scene>
+        <!--View Controller - Dłużnicy-->
+        <scene sceneID="1Ns-gW-q0E">
+            <objects>
+                <viewController id="lJ4-no-RSR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hRC-c1-ZF3"/>
+                        <viewControllerLayoutGuide type="bottom" id="5rL-UB-zQx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ves-5q-got">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Już wkrótce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tz3-3I-f0Z">
+                                <rect key="frame" x="126" y="276" width="68" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="tz3-3I-f0Z" secondAttribute="centerY" constant="0.5" id="akR-X6-Bpr"/>
+                            <constraint firstAttribute="centerX" secondItem="tz3-3I-f0Z" secondAttribute="centerX" id="pmi-9d-ZGw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dłużnicy" id="JQF-rr-T0C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kY-Qv-h52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="916"/>
+        </scene>
+        <!--Debtor View Controller - Dłużnicy-->
+        <scene sceneID="v9F-IU-xbh">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="fUV-cb-cne" customClass="DebtorViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dłużnicy" image="user" id="t7d-BE-P4L"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ew9-Bx-XJg">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.89641869070000002" green="0.32726332549999998" blue="0.42770886419999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lJ4-no-RSR" kind="relationship" relationship="rootViewController" id="N12-eS-liG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BD7-ep-Kzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="916"/>
         </scene>
         <!--Book View Controller - Książka-->
         <scene sceneID="fml-dK-bBt">
@@ -225,7 +297,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLD-mW-WXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="967"/>
+            <point key="canvasLocation" x="2117" y="180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JOE-In-Vou">
@@ -240,12 +312,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwJ-Hj-HbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="967"/>
+            <point key="canvasLocation" x="1664" y="180"/>
+        </scene>
+        <!--View Controller - Synchronizacja-->
+        <scene sceneID="Kc6-Ug-oMz">
+            <objects>
+                <viewController id="a1r-Z9-9to" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uil-zg-n8b"/>
+                        <viewControllerLayoutGuide type="bottom" id="hvp-nI-lt9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ns4-wG-Le9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Już wkrótce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQh-oG-wxW">
+                                <rect key="frame" x="127" y="276" width="68" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="UQh-oG-wxW" secondAttribute="centerY" constant="0.5" id="dqV-kt-h3y"/>
+                            <constraint firstAttribute="centerX" secondItem="UQh-oG-wxW" secondAttribute="centerX" constant="-0.5" id="eDx-pc-N6H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Synchronizacja" id="UJt-pI-7o8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bA-Eg-5MG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="1637"/>
         </scene>
     </scenes>
     <resources>
         <image name="bookmarks" width="25" height="23"/>
+        <image name="cloud" width="30" height="19"/>
         <image name="czarne" width="55" height="55"/>
+        <image name="user" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.988608717918396" green="0.37676775455474854" blue="0.40675529837608337" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

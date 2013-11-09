@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1F3303182E736500F67285 /* DebtorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F3302182E736500F67285 /* DebtorViewController.m */; };
+		FA1F3306182E737000F67285 /* SyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F3305182E737000F67285 /* SyncViewController.m */; };
 		FA422821182E299200EB74A1 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA422820182E299200EB74A1 /* BookViewController.m */; };
 		FA55D4D8182D963E00808519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D7182D963E00808519 /* Foundation.framework */; };
 		FA55D4DA182D963E00808519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D9182D963E00808519 /* CoreGraphics.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA1F3301182E736500F67285 /* DebtorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtorViewController.h; sourceTree = "<group>"; };
+		FA1F3302182E736500F67285 /* DebtorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtorViewController.m; sourceTree = "<group>"; };
+		FA1F3304182E737000F67285 /* SyncViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncViewController.h; sourceTree = "<group>"; };
+		FA1F3305182E737000F67285 /* SyncViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncViewController.m; sourceTree = "<group>"; };
 		FA42281F182E299200EB74A1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		FA422820182E299200EB74A1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		FA55D4D4182D963E00808519 /* Exlibris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exlibris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1F3300182E733B00F67285 /* Navcons */ = {
+			isa = PBXGroup;
+			children = (
+				FA55D512182D9B0400808519 /* BooksNavigationViewController.h */,
+				FA55D513182D9B0400808519 /* BooksNavigationViewController.m */,
+				FA1F3301182E736500F67285 /* DebtorViewController.h */,
+				FA1F3302182E736500F67285 /* DebtorViewController.m */,
+				FA1F3304182E737000F67285 /* SyncViewController.h */,
+				FA1F3305182E737000F67285 /* SyncViewController.m */,
+			);
+			name = Navcons;
+			sourceTree = "<group>";
+		};
 		FA55D4CB182D963E00808519 = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +142,7 @@
 				FA422820182E299200EB74A1 /* BookViewController.m */,
 				FA55D517182DA0CF00808519 /* Book.h */,
 				FA55D518182DA0CF00808519 /* Book.m */,
-				FA55D512182D9B0400808519 /* BooksNavigationViewController.h */,
-				FA55D513182D9B0400808519 /* BooksNavigationViewController.m */,
+				FA1F3300182E733B00F67285 /* Navcons */,
 				FA55D4E9182D963E00808519 /* Main.storyboard */,
 				FA55D4F2182D963E00808519 /* Images.xcassets */,
 				FA55D4DE182D963E00808519 /* Supporting Files */,
@@ -242,8 +260,10 @@
 				FA422821182E299200EB74A1 /* BookViewController.m in Sources */,
 				FA55D511182D9A3A00808519 /* BooksViewController.m in Sources */,
 				FA55D4E8182D963E00808519 /* AppDelegate.m in Sources */,
+				FA1F3306182E737000F67285 /* SyncViewController.m in Sources */,
 				FA55D514182D9B0400808519 /* BooksNavigationViewController.m in Sources */,
 				FA55D519182DA0CF00808519 /* Book.m in Sources */,
+				FA1F3303182E736500F67285 /* DebtorViewController.m in Sources */,
 				FA55D4E4182D963E00808519 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
