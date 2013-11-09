@@ -29,4 +29,6 @@
 
 + (Book *) bookForIndexPath:(NSIndexPath *)indexPath;
 
++ (Book *) bookWithVolumeInfoDictionary:(NSDictionary *)volumeInfo;
+
 @end

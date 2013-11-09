@@ -280,7 +280,7 @@
                     <navigationItem key="navigationItem" title="Książka" id="y0S-2w-b8f">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hIa-cZ-1nY">
                             <connections>
-                                <action selector="cancel:" destination="3ha-xP-wql" id="GYf-gD-7O0"/>
+                                <action selector="cancel:" destination="3ha-xP-wql" id="OFS-DE-Yit"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="td2-kt-gm8">

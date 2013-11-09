@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Book.h"
 
-@interface BookViewController : UITableViewController
+@interface BookViewController : UITableViewController <ZBarReaderDelegate>
 
 @property (strong,nonatomic) Book *book;
 
@@ -20,5 +20,6 @@
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
 - (IBAction)nextField:(id)sender;
+
 
 @end

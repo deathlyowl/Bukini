@@ -28,6 +28,15 @@ static NSMutableArray *filteredAll;
     return allBooks;
 }
 
++ (Book *)bookWithVolumeInfoDictionary:(NSDictionary *)volumeInfo{
+    Book *book = Book.new;
+    
+    book.author = [volumeInfo[@"authors"] componentsJoinedByString:@", "];
+    book.title = volumeInfo[@"title"];
+    
+    return book;
+}
+
 #pragma mark - Manage objects
 + (void)addBook:(Book *)book
 {
@@ -46,8 +55,10 @@ static NSMutableArray *filteredAll;
 + (void)saveBook:(Book *)newBook
         overBook:(Book *)oldBook
 {
-    [self.all replaceObjectAtIndex:[self.all indexOfObject:oldBook]
-                        withObject:newBook];
+    int index = [self.all indexOfObject:oldBook];
+    
+    if (index == NSNotFound) [self addBook:newBook];
+    else [self.all replaceObjectAtIndex:index withObject:newBook];
     [self saveQuiet:NO];
 }
 

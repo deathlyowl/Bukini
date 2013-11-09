@@ -9,7 +9,8 @@
 #import "BookViewController.h"
 
 @interface BookViewController () <UIAlertViewDelegate> {
-    UIAlertView *missingAlert;
+    UIAlertView *missingAlert, *googleIsStupidAlert;
+    BOOL showScanner;
 }
 
 @end
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad
 {
+    showScanner = YES;
     [super viewDidLoad];
     
     missingAlert = [[UIAlertView alloc] initWithTitle:@"Błąd"
@@ -27,14 +29,25 @@
                                     cancelButtonTitle:@"OK"
                                     otherButtonTitles:nil];
     
+    
+    googleIsStupidAlert = [[UIAlertView alloc] initWithTitle:@"Książki nie ma w Google Books"
+                                              message:@"Niestety, na tę chwilę, największa darmowa baza kodów ISBN nie zawiera tej książki. Musisz samodzielnie przepisać jej tytuł i autora z okładki. Albo ze strony tytułowej."
+                                             delegate:self
+                                    cancelButtonTitle:@"No trudno"
+                                    otherButtonTitles:nil];
+    
     if (book)
     {
-        [_authorField setText:book.author];
-        [_titleField setText:book.title];
-        [_publisherField setText:book.publisher];
-        
+        showScanner = NO;
+        [self loadBook];
         self.navigationItem.leftBarButtonItem = nil;
     }
+}
+
+- (void) loadBook{
+    [_authorField setText:book.author];
+    [_titleField setText:book.title];
+    [_publisherField setText:book.publisher];
 }
 
 - (void) selectFirstEmptyField{
@@ -49,7 +62,23 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self selectFirstEmptyField];
+    
+    
+    if (showScanner)
+    {
+        showScanner = NO;
+        ZBarReaderViewController *reader = [ZBarReaderViewController new];
+        reader.readerDelegate = self;
+        [reader.scanner setSymbology: ZBAR_QRCODE
+                              config: ZBAR_CFG_ENABLE
+                                  to: 0];
+        reader.readerView.zoom = 1.0;
+        
+        [self presentViewController:reader
+                           animated:YES
+                         completion:nil];
+    }
+    else [self selectFirstEmptyField];
 }
 
 - (IBAction)cancel:(id)sender {
@@ -66,6 +95,7 @@
     {
         if (!book)
         {
+            NSLog(@"Save new");
             // New Book
             book = Book.new;
             book.author = _authorField.text;
@@ -73,11 +103,11 @@
             book.publisher = _publisherField.text;
             
             [Book addBook:book];
-            [self dismissViewControllerAnimated:YES
-                                     completion:nil];
         }
         else
         {
+            
+            NSLog(@"Edit old");
             // Edit book
             Book *newBook = Book.new;
             newBook.author = _authorField.text;
@@ -87,14 +117,50 @@
             [Book saveBook:newBook
                   overBook:book];
             
-            [self.navigationController popViewControllerAnimated:YES];
         }
+    
+        [self dismissViewControllerAnimated:YES
+                                 completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
 - (IBAction)nextField:(id)sender {
     if (sender == _authorField) [_titleField becomeFirstResponder];
     if (sender == _titleField) [_publisherField becomeFirstResponder];
+}
+
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    // ADD: get the decode results
+    id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results) break;
+    
+    NSString *ISBN = symbol.data;
+    
+    NSLog(@"ISBN:%@", ISBN);
+    
+    NSData *myData = [[NSData alloc]initWithContentsOfURL:[NSURL.alloc initWithString:[NSString stringWithFormat:@"https://www.googleapis.com/books/v1/volumes?q=isbn:%@", ISBN]]];
+    NSDictionary *response = [NSJSONSerialization JSONObjectWithData:myData options:NSJSONReadingMutableContainers error:nil];
+    
+    if ([response[@"totalItems"] intValue]) {
+        NSLog(@"We have a book!");
+        
+        NSDictionary *item = [response[@"items"] firstObject];
+        
+        
+        book = [Book bookWithVolumeInfoDictionary:item[@"volumeInfo"]];
+        [self loadBook];
+        [reader dismissViewControllerAnimated:YES
+                                   completion:nil];
+    }
+    else{
+        [reader dismissViewControllerAnimated:YES
+                                   completion:nil];
+        [googleIsStupidAlert show];
+    }
 }
 
 @end
