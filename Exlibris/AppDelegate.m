@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Book.h"
 
 @implementation AppDelegate
 
