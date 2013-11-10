@@ -25,9 +25,6 @@
 		FA55D4E8182D963E00808519 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D4E7182D963E00808519 /* AppDelegate.m */; };
 		FA55D4EB182D963E00808519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA55D4E9182D963E00808519 /* Main.storyboard */; };
 		FA55D4F3182D963E00808519 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA55D4F2182D963E00808519 /* Images.xcassets */; };
-		FA55D4FA182D963E00808519 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4F9182D963E00808519 /* XCTest.framework */; };
-		FA55D4FB182D963E00808519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4D7182D963E00808519 /* Foundation.framework */; };
-		FA55D4FC182D963E00808519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA55D4DB182D963E00808519 /* UIKit.framework */; };
 		FA55D511182D9A3A00808519 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D510182D9A3A00808519 /* BooksViewController.m */; };
 		FA55D514182D9B0400808519 /* BooksNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D513182D9B0400808519 /* BooksNavigationViewController.m */; };
 		FA55D519182DA0CF00808519 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FA55D518182DA0CF00808519 /* Book.m */; };
@@ -35,16 +32,6 @@
 		FAF0774D182FB07E0060748B /* DBChooser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF0774B182FB07E0060748B /* DBChooser.framework */; };
 		FAF0774E182FB07E0060748B /* ZBarSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF0774C182FB07E0060748B /* ZBarSDK.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FA55D4FD182D963E00808519 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA55D4CC182D963E00808519 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA55D4D3182D963E00808519;
-			remoteInfo = Exlibris;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FA1F3301182E736500F67285 /* DebtorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtorViewController.h; sourceTree = "<group>"; };
@@ -58,7 +45,7 @@
 		FA1F3332182EA07800F67285 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		FA1F3334182EC23900F67285 /* SynchronizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizeViewController.h; sourceTree = "<group>"; };
 		FA1F3335182EC23900F67285 /* SynchronizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizeViewController.m; sourceTree = "<group>"; };
-		FA1F333B182ED32E00F67285 /* DBChooser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DBChooser.bundle; path = ../DBChooser.bundle; sourceTree = "<group>"; };
+		FA1F333B182ED32E00F67285 /* DBChooser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DBChooser.bundle; sourceTree = "<group>"; };
 		FA42281F182E299200EB74A1 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		FA422820182E299200EB74A1 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		FA55D4D4182D963E00808519 /* Exlibris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exlibris.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,8 +60,6 @@
 		FA55D4E7182D963E00808519 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA55D4EA182D963E00808519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA55D4F2182D963E00808519 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FA55D4F8182D963E00808519 /* ExlibrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExlibrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA55D4F9182D963E00808519 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FA55D50F182D9A3A00808519 /* BooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksViewController.h; sourceTree = "<group>"; };
 		FA55D510182D9A3A00808519 /* BooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksViewController.m; sourceTree = "<group>"; };
 		FA55D512182D9B0400808519 /* BooksNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksNavigationViewController.h; sourceTree = "<group>"; };
@@ -102,16 +87,6 @@
 				FA55D4DC182D963E00808519 /* UIKit.framework in Frameworks */,
 				FA55D4D8182D963E00808519 /* Foundation.framework in Frameworks */,
 				FAF0774D182FB07E0060748B /* DBChooser.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA55D4F5182D963E00808519 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA55D4FA182D963E00808519 /* XCTest.framework in Frameworks */,
-				FA55D4FC182D963E00808519 /* UIKit.framework in Frameworks */,
-				FA55D4FB182D963E00808519 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				FA55D4D4182D963E00808519 /* Exlibris.app */,
-				FA55D4F8182D963E00808519 /* ExlibrisTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				FA1F3332182EA07800F67285 /* libiconv.dylib */,
+				FA1F333B182ED32E00F67285 /* DBChooser.bundle */,
 				FAF0774B182FB07E0060748B /* DBChooser.framework */,
 				FAF0774C182FB07E0060748B /* ZBarSDK.framework */,
 				FA1F3330182EA06B00F67285 /* QuartzCore.framework */,
@@ -162,7 +137,6 @@
 				FA55D4D7182D963E00808519 /* Foundation.framework */,
 				FA55D4D9182D963E00808519 /* CoreGraphics.framework */,
 				FA55D4DB182D963E00808519 /* UIKit.framework */,
-				FA55D4F9182D963E00808519 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,7 +167,6 @@
 		FA55D4DE182D963E00808519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA1F333B182ED32E00F67285 /* DBChooser.bundle */,
 				FA55D4DF182D963E00808519 /* Exlibris-Info.plist */,
 				FA55D4E0182D963E00808519 /* InfoPlist.strings */,
 				FA55D4E3182D963E00808519 /* main.m */,
@@ -222,24 +195,6 @@
 			productReference = FA55D4D4182D963E00808519 /* Exlibris.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA55D4F7182D963E00808519 /* ExlibrisTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA55D50C182D963E00808519 /* Build configuration list for PBXNativeTarget "ExlibrisTests" */;
-			buildPhases = (
-				FA55D4F4182D963E00808519 /* Sources */,
-				FA55D4F5182D963E00808519 /* Frameworks */,
-				FA55D4F6182D963E00808519 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FA55D4FE182D963E00808519 /* PBXTargetDependency */,
-			);
-			name = ExlibrisTests;
-			productName = ExlibrisTests;
-			productReference = FA55D4F8182D963E00808519 /* ExlibrisTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -251,9 +206,6 @@
 				TargetAttributes = {
 					FA55D4D3182D963E00808519 = {
 						DevelopmentTeam = 377SA7CLTK;
-					};
-					FA55D4F7182D963E00808519 = {
-						TestTargetID = FA55D4D3182D963E00808519;
 					};
 				};
 			};
@@ -271,7 +223,6 @@
 			projectRoot = "";
 			targets = (
 				FA55D4D3182D963E00808519 /* Exlibris */,
-				FA55D4F7182D963E00808519 /* ExlibrisTests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,13 +236,6 @@
 				FA1F333C182ED32E00F67285 /* DBChooser.bundle in Resources */,
 				FA55D4E2182D963E00808519 /* InfoPlist.strings in Resources */,
 				FA55D4EB182D963E00808519 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA55D4F6182D963E00808519 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,22 +259,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA55D4F4182D963E00808519 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FA55D4FE182D963E00808519 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA55D4D3182D963E00808519 /* Exlibris */;
-			targetProxy = FA55D4FD182D963E00808519 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA55D4E0182D963E00808519 /* InfoPlist.strings */ = {
@@ -464,48 +393,6 @@
 			};
 			name = Release;
 		};
-		FA55D50D182D963E00808519 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Exlibris.app/Exlibris";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ExlibrisTests/ExlibrisTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		FA55D50E182D963E00808519 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Exlibris.app/Exlibris";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Exlibris/Exlibris-Prefix.pch";
-				INFOPLIST_FILE = "ExlibrisTests/ExlibrisTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -523,15 +410,6 @@
 			buildConfigurations = (
 				FA55D50A182D963E00808519 /* Debug */,
 				FA55D50B182D963E00808519 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA55D50C182D963E00808519 /* Build configuration list for PBXNativeTarget "ExlibrisTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA55D50D182D963E00808519 /* Debug */,
-				FA55D50E182D963E00808519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
