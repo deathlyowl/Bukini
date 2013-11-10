@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Book.h"
-#import "ZBarSDK.h"
+#import <ZBarSDK/ZBarSDK.h>
 
 @interface BookViewController : UITableViewController <ZBarReaderDelegate>
 

@@ -104,11 +104,11 @@
     // Configure the cell...
     
     [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", firstName, lastName]];
-    NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(person);
-    UIImage  *img = [UIImage imageWithData:imgData];
+    //NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(person);
+    //UIImage  *img = [UIImage imageWithData:imgData];
     
     
-    [cell.imageView setImage:img ? [DeptorsViewController imageWithImage:img scaledToSize:CGSizeMake(50, 50)] : [DeptorsViewController imageWithImage:[UIImage imageNamed:@"nothing"] scaledToSize:CGSizeMake(50, 50)]];
+    [cell.imageView setImage:[UIImage imageNamed:@"nothing"]];
     [cell.imageView setBackgroundColor:self.tableView.tintColor];
     [cell.imageView.layer setCornerRadius:50./2.];
     
